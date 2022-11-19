@@ -15,11 +15,11 @@ public class Hook {
 
     WebDriver driver;
 
-    @Before
+    /*@Before
     public void setUpDriver(){
         driver = Driver.getDriver();
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-        driver.manage().window().fullscreen();
+        driver.manage().window().maximize();
         System.out.println("This is from before annotation");
     }
 
@@ -35,6 +35,9 @@ public class Hook {
             driver = null;
         }
 
-         */
+
     }
+
+   */
+
 }

@@ -9,6 +9,7 @@ import java.io.File;
 import java.io.IOException;
 import java.net.HttpURLConnection;
 import java.net.URL;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.NoSuchElementException;
 import java.util.Set;
@@ -95,5 +96,13 @@ public class BrowserUtils {
     public static void selectByVisibleText(WebElement element, String text){
         Select select = new Select(element);
         select.selectByVisibleText(text);
+    }
+
+    public static List<String> getTextList(List<WebElement> elements){
+        List<String> textList = new ArrayList<>();
+        for(WebElement element:elements){
+            textList.add(element.getText());
+        }
+        return textList;
     }
 }
